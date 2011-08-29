@@ -112,14 +112,14 @@ on post-fs
     chown shell shell /data/local/12m
     chown shell shell /data/local/12m/batch
     chown shell shell /data/local/tmp
-    #Create dropbear directory
+    # Create dropbear directory
     mkdir /data/dropbear 0755 root shell
 
     # Temp workaround for HP library cleanup
     symlink /dev/hp3a-omap /dev/hp3A-omap
 
     # Enable ADB mode
-      write /dev/usb_device_mode msc_adb
+    write /dev/usb_device_mode msc_adb
 
     mount rootfs rootfs / ro remount
 
@@ -172,7 +172,7 @@ on boot
     chmod 0666 /sys/class/leds/spotlight/brightness
     chown media media /sys/class/leds/af-led/brightness
 
-   # Change the ownership of touch screen file
+    # Change the ownership of touch screen file
     chown root system /sys/devices/platform/i2c_omap.1/i2c-1/1-004a/irq_enable
 
     # Enable panic on softlockup
